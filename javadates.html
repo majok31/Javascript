@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript dates</title>
+</head>
+<body>
+	current date and time: <span id="txt"></span>
+	<script type="text/javascript">
+		var today= new Date();
+		document.getElementById('txt').innerHTML=today
+	</script><br>
+
+	Current Time: <span id="text"></span>
+	<script type="text/javascript">
+       window.onload=function(){getTime();}
+       function getTime(){
+       	var Today=new Date();
+       	var h=Today.getHours();
+       	var m=Today.getMinutes();
+       	var s=Today.getSeconds();
+       	// add a zero in front of numbers<10
+       	m=checkTime(m);
+       	s=checkTime(s);
+       	document.getElementById('text').innerHTML=h+":"+m+":"+s;
+       	setTimeout(function(){getTime()},1000);
+       }
+       //setInterval("getTime()",1000);//another way
+       function checkTime(i){
+       	if(i<10){
+       		i="0" +i;
+       	}
+       	return i;
+       }
+
+
+	</script>
+
+</body>
+</html>

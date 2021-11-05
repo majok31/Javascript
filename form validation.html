@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form validation</title>
+
+	<script type="text/javascript">
+		function validateform(){
+			var name=document.myform.name.value;
+			var password=document.myform.password.value;
+			var password2=document.myform.password2.value;
+
+			if(name==null||name==""){
+				alert ("name can't be blank");
+				return false;
+			}
+			else if(password.length<8){
+				alert ("password must be above 8 characters");
+				return false;}
+
+				else if(password==password2){
+					return true;
+				}
+				else{
+					alert("the password do not match");
+					return false;
+				}
+		}
+
+	</script>
+</head>
+<body>
+    <form name="myform" onsubmit="return validateform()">
+    	Name: <input type="text" name="name"><br><br>
+    	password: <input type="password" name="password"><br><br>
+    	confirm password: <input type="password" name="password2"><br><br>
+
+
+
+    	<input type="submit" name="Register">
+    </form>
+
+</body>
+</html>

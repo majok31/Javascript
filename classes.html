@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript classes</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//class declaration
+		class students{
+
+      // object initialization
+		constructor(name, idno, fees){
+			this.name=name;
+			this.idno=idno
+			this.fees=fees
+			}
+			//method declaration
+			display(){
+				document.writeln(this.name+" " +this.idno+" " +this.fees+ "<br>");
+			}
+		}
+
+		//passing objects to the variables
+		var stud1=new students("guzzu",101,5000)
+		var stud2=new students("elchapo",102,5500)
+
+
+
+		//caling method 
+        stud1.display();
+		stud2.display();
+
+
+
+
+        var staff = class{
+        	//initialization an object
+        	constructor(id,name,sal){
+        		this.id = id;
+        		this.name = name;
+        		this.sal = sal;
+        	}
+        displayresult(){
+        	document.writeln(this.id+ " " +this.name+" " +this.sal+"<br>")
+        }
+        }
+		//passing objetcs to the variables
+		var emp1=new staff("abri",1238,10500)
+		var emp2=new staff("bintu",1458,2000500)
+		// calling method
+		emp1.displayresult();
+		emp2.displayresult();
+
+		// class redeclaration
+		var staff= class{
+			constructor(id,name,sal){
+        		this.id = id;
+        		this.name = name;
+        		this.sal = sal;
+        	}
+        displayresult(){
+        	document.writeln(this.id+ " " +this.name+" " +this.sal+"<br>")
+        }
+        }
+		//passing objetcs to the variables
+		var emp1=new staff("abri",1238,10500)
+		var emp2=new staff("bintu",1458,2000500)
+		// calling method
+		emp1.displayresult();
+		emp2.displayresult();
+
+
+		
+
+
+
+		
+
+	</script>
+
+</body>
+</html>

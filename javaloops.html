@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>javascript loops</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+/*var number;
+for (number=1; number<=100; number++){
+	document.write(number + " ");
+}*/
+/*var number = 100;
+while(number<=150){
+	document.write(number);
+	number++;
+}*/
+var number = 1;
+do{
+	document.write(number);
+	number++;
+}
+while(number<=100);
+
+</script>
+<div class="container" id="left">
+	<img src="images/img.jpg" width="200" height="200" align="left">
+	<div class="text">
+<h1>Our curriculum</h1>
+<p>our curriculum is is an event evolving set of materials created from leading figures in the tech industry, students participate in learning fundamental conceptsof computer programming and building projects to showcase their comprehension of HTML, CSS, Javascript, front-end architechture and server-side development. Their coursework is accompanied by mentorship sessions and regular code reviews from proffesional developers.</p>
+</div>
+	</div>
+
+	<div class="container" id="center">
+	<img src="back.jpg" width="200" height="200" align="center">
+
+	<h1>Students</h1>
+<p>our curriculum is is an event evolving set of materials created from leading figures in the tech industry, students participate in learning fundamental conceptsof computer programming and building projects to showcase their comprehension of HTML, CSS, Javascript, front-end architechture and server-side development. Their coursework is accompanied by mentorship sessions and regular code reviews from proffesional developers.</p>
+</div>
+.container{
+	margin: 150px auto;
+	width: 50px;
+	padding: 8px;
+
+}
+#left{
+	float: left;
+	display: inline-flex;
+	margin-left: 10px;
+}
+#center{
+	float: center;
+}
+img{
+	border-radius: 50%;
+	margin-left: 10px;
+
+}
+.text{
+}
+</body>
+</html>

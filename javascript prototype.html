@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>javascript prototype</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Employee(Firstname,Lastname,Salary,Title)
+		{
+			this.Firstname= Firstname
+			this.lastname= Lastname
+		    this.salary= Salary
+		    this.Title= Title
+		}
+		Employee.prototype.FullDetails=function(){
+			return this.Firstname + " " + this.lastname + " " + this.salary + "" + this.Title;
+		}
+		var Employee1 = new Employee("Majok","ruot",300000,"Director");
+        var Employee2 = new Employee("Qasim","abdi",10000, "cleaner");
+        var Employee3 = new Employee("Muna","aisha",15000, "secretary");
+        document.writeln(Employee1.FullDetails()+ "<br>")
+        document.writeln(Employee2.FullDetails()+ "<br>")
+        document.writeln(Employee3.FullDetails()+ "<br>")
+
+        function Employee(Firstname,Lastname,Salary,Title)
+		{
+			this.Firstname= Firstname
+			this.Lastname= Lastname
+		    this.Salary= Salary
+		    this.Title= Title
+		}
+		Employee.prototype.Company="SIR"
+		var Employee1 = new Employee("Majok","ruot",300000,"Director");
+        var Employee2 = new Employee("Qasim","abdi",10000, "cleaner");
+        var Employee3 = new Employee("Muna","aisha",15000, "secretary");
+        document.writeln(Employee1.Firstname + " " + Employee1.Lastname + " " + Employee1.Salary + "" + Employee1.Title+ " " +Employee1.Company+ "<br>");
+        document.writeln(Employee2.Firstname + " " + Employee2.Lastname + " " + Employee2.Salary + "" + Employee2.Title+ " " +Employee2.Company+ "<br>");
+        document.writeln(Employee3.Firstname + " " + Employee3.Lastname + " " + Employee3.Salary + "" + Employee3.Title+ " " +Employee3.Company+ "<br>");
+
+
+function Employee(Name,Company,Firstname,Lastname,)
+		{
+			this.Name= Name
+			this.Company = Company
+			this.Firstname= Firstname
+			this.Lastname= Lastname
+		}
+		Employee.prototype.FullDetails =function(){
+			return this.Name+ " " +this.Company+" " +this.Firstname+" " +this.Lastname;
+		}
+          
+        var Employee1 = new Employee("Name:","Kuku","Kaka"," ");
+        var Employee = new Employee("Company:","SIR"," "," ");
+        document.writeln(Employee1.FullDetails()+ "<br>")
+        document.writeln(Employee.FullDetails()+ "<br>")
+
+
+	</script>
+
+</body>
+</html>
