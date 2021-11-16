@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Factorial of numbers</title>
+</head>
+<body>
+    Enter the number <input id = "number">
+    <span id = "answer"></span>
+    <br><br>
+    <button onclick="calculateFactorial();">Calculate factorial</button>
+
+    <script type="text/javascript">
+    	function calculateFactorial(){
+    		var  loop, num, factorial = 1;
+    		num = Number(document.getElementById("number").innerHTML.value);
+
+    		for(loop = 1; loop <= num; loop++){
+    			factorial = factorial * loop;
+    		}
+    		document.getElementById("answer").innerHTML = " <br/> The factorial of" + num + "is" + factorial;
+    	}
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
