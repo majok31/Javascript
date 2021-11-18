@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting arrays </title>
+</head>
+<body>
+
+<button onclick="myfunction()">FRUITS</button>
+<br>
+<br>
+    <span id="vitamin"></span> <br><br>
+
+
+    <button onclick="ufunction()">POINTS</button>
+<br>
+<br>
+    <span id="points"></span>
+    <script>
+        var fruits= ["Banana", "Pineape", "Pawpaw", "Lemon", "Mango", "Orange", "Avocado"];
+        document.getElementById("vitamin").innerHTML = fruits;
+
+        function myfunction(){
+fruits.sort();
+fruits.reverse();
+document.getElementById("vitamin").innerHTML = fruits;
+        }
+        
+
+     var points = [3,5,8,1,0,58,92,39,76];
+     document.getElementById("points").innerHTML = points;
+     function ufunction(){
+         points.sort(function(a,b){return b - a});
+         document.getElementById("points").innerHTML = points;
+     }
+             
+         
+         
+     
+
+    </script>
+</body>
+</html>

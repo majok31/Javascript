@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVERSING THE NUMBERS</title>
+</head>
+<body>
+    <script type="text/Javascript">
+       function reverse(){
+        var a, no, b, temporary = 0;
+        no = Number(document.getElementById("numbers").value);
+        b = no;
+        while (no > 0) {
+            a = no%10;
+            no = parseInt(no/10);
+            temporary = temporary * 10 + a;
+        }
+        alert(temporary);
+    }
+</script>
+
+   Enter the number <input id="numbers">
+   <br>
+    <button onclick="reverse();" type="button">Reverse</button>
+
+
+    
+</body>
+</html>
