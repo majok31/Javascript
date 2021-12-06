@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> checking Palindrome numbers</title>
+</head>
+<body>
+    <script>
+        function checkpalindrome(){
+            var a, b, no, storeTem = 0;
+            no = Number(document.getElementById("numberId").value);
+            b = no;
+            while(no>0){
+                a = no % 10;
+                no = parseInt(no/10);
+                storeTem = storeTem * 10  + a;
+            }
+            if(storeTem == b){
+                document.getElementById("result").innerHTML = "it is a palindrome number."
+            }
+
+            else{
+                document.getElementById("result").innerHTML = "it is not a palindrome number."
+
+            }
+        }
+    </script>
+    Enter the Number of your choice <br/>
+    <input id="numberId">
+
+    <button onclick="checkpalindrome();">Check</button> <br> <br/>
+    <span id="result"></span>
+</body>
+</html>
